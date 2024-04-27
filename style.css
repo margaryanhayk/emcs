@@ -5,43 +5,38 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4;
+    background: #f4f4f4; /* Light grey background */
 }
 
 #gameArea {
-    width: 300px;
-    height: 500px;
+    width: 300px; /* Fixed width for the game area */
+    height: 500px; /* Fixed height for the game area */
     position: relative;
-    overflow: hidden;
-    background-color: #333;
-    color: white;
+    overflow: hidden; /* Ensures nothing goes outside the game area */
+    background-color: #333; /* Dark grey background for the game area */
+    color: white; /* White text color for any text inside the game area */
+    border: 2px solid #000; /* Black border for visibility */
 }
 
 #player {
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Width of the player */
+    height: 50px; /* Height of the player */
     position: absolute;
-    bottom: 10px;
-    left: 125px;
-    background-color: blue;
+    bottom: 10px; /* Position player at the bottom of the game area */
+    left: 125px; /* Center the player initially */
+    background-color: blue; /* Blue color for the player */
+    transition: left 0.2s; /* Smooth transition for player movement */
 }
 
-#money {
-    width: 20px;
-    height: 20px;
+.money {
+    width: 20px; /* Width of the money */
+    height: 20px; /* Height of the money */
     position: absolute;
-    top: 0;
-    background-color: gold;
-    animation: fall 3s infinite linear;
+    background-color: gold; /* Gold color to represent money */
 }
 
 #score {
     position: absolute;
     top: 10px;
-    left: 10px;
-}
-
-@keyframes fall {
-    from { top: -20px; }
-    to { top: 500px; }
+    left: 10px; /* Position the score in the top left corner */
 }
